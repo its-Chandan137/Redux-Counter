@@ -1,16 +1,20 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './App.css'
+import { useSelector,useDispatch } from 'react-redux'
+import {incNum , decNum} from './actions/index'
+
 
 function App() {
-  const [data,setData] = useState(1)
+  const myState = useSelector((state)=> state.changeNum)
+  const dispatch = useDispatch();
   return (
     <div className='wholeApp'>
       <div className="counter">
-        <button className='button1' onClick={()=>setData(data-1)}>-</button>
+        <button className='button1'  onClick={()=> dispatch(decNum())}>-</button>
         <div className='box'>
-          <div className="box2">{data}</div>
+          <input className="box2" defaultValue={myState}></input>
         </div>
-        <button className='button2' onClick={()=>setData(data+1)}>+</button>
+        <button className='button2' onClick={()=> dispatch(incNum())}>+</button>
       </div>
     </div>
   )

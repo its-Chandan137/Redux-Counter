@@ -1,9 +1,18 @@
+*::-webkit-scrollbar{
+  display: none;
+}
+
+*{
+  user-select: none;
+}
+
 body{
-  background-color: rgba(167, 191, 191, 0.316);
+  background-color: rgba(0, 0, 0, 0.742);
   display: flex;
   height: 100lvh;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 .counter{
@@ -30,6 +39,8 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  outline: none;
 }
 
 .button1{
@@ -39,7 +50,8 @@ body{
   border-top: 1px solid;
   border-left: 1px solid;
   background-color: rgba(224, 214, 214, 0.4);
-
+  /* border-bottom-left-radius: 7px; */
+  /* border-top-left-radius: 7px; */
 }
 
 .button2{
@@ -49,6 +61,7 @@ body{
   border-top: 1px solid;
   border-right: 1px solid;
   background-color: rgba(224, 214, 214, 0.4);
-
+  /* border-bottom-right-radius: 7px; */
+  /* border-top-right-radius: 7px; */
 }
 
